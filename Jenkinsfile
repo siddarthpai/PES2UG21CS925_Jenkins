@@ -4,13 +4,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'non_existing_command'
+                build 'PES2UG21CS925-1'
+                sh 'g++ hello.cpp -o output'
             }
         }
 
         stage('Test') {
             steps {
-                sh './output'
+                sh './test'
             }
         }
 
